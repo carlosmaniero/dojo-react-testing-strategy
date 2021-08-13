@@ -29,3 +29,10 @@ module.exports.disableTransitions = async (page, element) => {
         element.style.transition = 'none';
     }, element)
 }
+
+module.exports.runWithViewports = async (page, viewports, fn) => {
+    for (const viewport of viewports) {
+        page.setViewport(viewport);
+        await fn();
+    }
+}
