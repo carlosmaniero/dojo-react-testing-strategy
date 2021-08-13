@@ -1,0 +1,21 @@
+name: Run tests
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Run all Tests
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repo
+        uses: action/checkout@master
+      - name: Install project dependencies
+        run: yarn
+      - name: Install visual test dependencies
+        run: yarn --cwd visual-tests
+      - name: Run unit tests
+        run: yarn test
+      - name: Run visual tests
+        run: yarn visual-test
