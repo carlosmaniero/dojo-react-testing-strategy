@@ -12,9 +12,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@master
       - name: Install project dependencies
-        run: yarn
+        run: yarn --network-timeout 100000
       - name: Install visual test dependencies
-        run: yarn --cwd visual-tests
+        run: yarn --cwd visual-tests --network-timeout 100000
       - name: Run unit tests
         run: yarn test
       - name: Run visual tests
