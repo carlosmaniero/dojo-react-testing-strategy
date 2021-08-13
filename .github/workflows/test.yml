@@ -10,7 +10,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Checkout repo
-        uses: action/checkout@master
+        uses: actions/checkout@master
       - name: Install project dependencies
         run: yarn
       - name: Install visual test dependencies
