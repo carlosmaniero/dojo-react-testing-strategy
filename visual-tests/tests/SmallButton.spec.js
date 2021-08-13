@@ -1,4 +1,4 @@
-import {goToComponent, componentToMatchSnapshot, disableTransitions} from '../components';
+import {goToComponent, componentToMatchSnapshot, disableTransitions} from '../storybook';
 
 
 describe('SmallButton', () => {
