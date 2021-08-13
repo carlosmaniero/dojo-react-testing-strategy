@@ -1,7 +1,7 @@
 const express = require('express');
 const fetch = require('node-fetch');
 const cors = require('cors')
-const port = 3000;
+const port = 4200;
 const pokedexDB = 'https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/pokedex.json';
 const app = express();
 app.use(cors());

@@ -17,7 +17,9 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "SKIP_PREFLIGHT_CHECK=true react-scripts start",
+    "start:backend": "yarn --cwd backend start",
+    "start:react": "SKIP_PREFLIGHT_CHECK=true react-scripts start",
+    "start": "concurrently yarn:start:backend yarn:start:react",
     "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
     "test": "SKIP_PREFLIGHT_CHECK=true react-scripts test",
     "eject": "SKIP_PREFLIGHT_CHECK=true react-scripts eject",
@@ -25,7 +27,8 @@
     "storybook:ci": "yarn storybook --quiet --ci",
     "visual-test": "start-server-and-test storybook:ci \"http://localhost:6006/iframe.html\" run-visual-tests",
     "run-visual-tests": "yarn --cwd visual-tests test",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "setup": "yarn && yarn --cwd visual-tests && yarn --cwd backend"
   },
   "eslintConfig": {
     "extends": [

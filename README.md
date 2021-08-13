@@ -2,12 +2,16 @@
 
 ![Problem Statement](./src/problem-statement.png)
 
-## Setup
+## Setup / Install all packages
 
 ```bash
-yarn
-cd visual-tests
-yarn
+yarn setup
+```
+
+## Starting the application
+
+```bash
+yarn start
 ```
 
 ## Running tests
