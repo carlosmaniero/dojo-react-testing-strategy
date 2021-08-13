@@ -12,3 +12,9 @@ export const DefaultView = Template.bind({});
 DefaultView.args = {
   children: "+"
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  children: "+",
+  disabled: true,
+};

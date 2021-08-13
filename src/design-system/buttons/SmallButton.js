@@ -19,4 +19,10 @@ export const SmallButton = styled.button`
         box-shadow: ${-boxShadow}px ${-boxShadow}px 0px #3B4CCA;
         background: ${darken(0.2, '#3B4CCA')};
     }
+
+    &:disabled, &:disabled:hover, &:disabled:focus {
+        background: #f1f1f1;
+        color: ${darken(0.2, '#f1f1f1')};
+        box-shadow: ${boxShadow}px ${boxShadow}px 0px ${darken(0.2, '#f1f1f1')};
+    }
 `
