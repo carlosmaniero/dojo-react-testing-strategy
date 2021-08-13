@@ -26,7 +26,25 @@ module.exports.componentToMatchSnapshot = async (page, padding = 20) => {
 
 module.exports.disableTransitions = async (page, element) => {
     await page.evaluate((element) => {
-        element.style.transition = 'none';
+        if (element) {
+            element.style.transition = 'none';
+            return;
+        }
+        document.querySelectorAll('*').forEach(element => {
+            element.style.animation = 'none';
+        });
+    }, element)
+}
+
+module.exports.disableAnimations = async (page, element) => {
+    await page.evaluate((element) => {
+        if (element) {
+            element.style.animation = 'none';
+            return;
+        }
+        document.querySelectorAll('*').forEach(element => {
+            element.style.animation = 'none';
+        });
     }, element)
 }
 
