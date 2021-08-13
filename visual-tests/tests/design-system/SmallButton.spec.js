@@ -1,4 +1,4 @@
-import {goToComponent, componentToMatchSnapshot, disableTransitions} from '../storybook';
+import {goToComponent, componentToMatchSnapshot, disableTransitions} from '../../storybook';
 
 
 describe('SmallButton', () => {
@@ -6,9 +6,11 @@ describe('SmallButton', () => {
         await goToComponent('design-system-smallbutton--default-view', async (page, document) => {
             await componentToMatchSnapshot(page);
             const component = await document.getByText('+');
+
             await disableTransitions(component);
             await component.hover();
+
             await componentToMatchSnapshot(page);
         });
-    })
-})
+    });
+});

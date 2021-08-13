@@ -13,6 +13,7 @@ export const SmallButton = styled.button`
     transition: all .25s;
     font-size: 1.25rem;
     outline: none;
+    font-family: Arial, Helvetica, sans-serif;
 
     &:hover, &:focus {
         box-shadow: ${-boxShadow}px ${-boxShadow}px 0px #3B4CCA;
