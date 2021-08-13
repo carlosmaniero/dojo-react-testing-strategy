@@ -11,7 +11,6 @@ export const Card = styled.div`
     font-size: 1.25rem;
     padding: 20px;
     border: 2px solid #FFDE00;
-    font-family: Arial, Helvetica, sans-serif;
 
     &:hover, &:focus {
         box-shadow: ${-boxShadow}px ${-boxShadow}px 0px #FFDE00;
