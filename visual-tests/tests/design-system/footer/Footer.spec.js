@@ -1,9 +1,8 @@
 import {goToComponent, componentToMatchSnapshot, disableAnimations} from '../../../storybook';
 
-describe('Header', () => {
+describe('Footer', () => {
     it('renders properly', async () => {
-        await goToComponent('design-system-header--default-view', async (page) => {
-            await disableAnimations(page);
+        await goToComponent('design-system-footer--default-view', async (page) => {
             await componentToMatchSnapshot(page);
         });
     });
