@@ -13,7 +13,7 @@ const CounterWrapper = styled.div`
 `;
 
 export const Counter = ({value, onChange, max, min}) => <CounterWrapper>
-    <SmallButton disabled={value === min} onClick={() => onChange(value - 1)}>-</SmallButton>
+    <SmallButton disabled={value === min} aria-label="Decrease cart" onClick={() => onChange(value - 1)}>-</SmallButton>
     <span>{value}</span>
-    <SmallButton disabled={value === max} onClick={() => onChange(value + 1)}>+</SmallButton>
+    <SmallButton disabled={value === max} aria-label="Increase cart" onClick={() => onChange(value + 1)}>+</SmallButton>
 </CounterWrapper>;

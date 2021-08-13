@@ -13,7 +13,7 @@ describe('Counter', () => {
         const callback = jest.fn();
         render(<Counter value={0} max={1} min={0} onChange={callback} />);
 
-        const button = screen.getByText('+');
+        const button = screen.getByLabelText('Increase cart');
         button.click();
 
         expect(callback).toBeCalledWith(1);
@@ -23,7 +23,7 @@ describe('Counter', () => {
         const callback = jest.fn();
         render(<Counter value={1} max={1} min={0} onChange={callback} />);
 
-        const button = screen.getByText('-');
+        const button = screen.getByLabelText('Decrease cart');
         button.click();
 
         expect(callback).toBeCalledWith(0);
@@ -33,7 +33,7 @@ describe('Counter', () => {
         const callback = jest.fn();
         render(<Counter value={1} max={1} min={0} onChange={callback} />);
 
-        const button = screen.getByText('+');
+        const button = screen.getByLabelText('Increase cart');
         button.click();
 
         expect(callback).not.toBeCalled();
@@ -43,7 +43,7 @@ describe('Counter', () => {
         const callback = jest.fn();
         render(<Counter value={0} max={1} min={0} onChange={callback} />);
 
-        const button = screen.getByText('-');
+        const button = screen.getByLabelText('Decrease cart');
         button.click();
 
         expect(callback).not.toBeCalled();
