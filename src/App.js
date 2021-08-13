@@ -1,10 +1,7 @@
-import { Footer } from "./design-system/footer/Footer";
-import { Header } from "./design-system/header/Header";
+import { Page } from "./design-system/page/Page";
 
-const App = () => <div>
-  <Header />
+const App = () => <Page>
   Hello, World!
-  <Footer />
-</div>;
+</Page>;
 
 export default App;
